@@ -1,6 +1,5 @@
 from utils.model import ANN_mod
 from utils.all_utils import prepare_data
-from utils.all_utils import save_model
 from utils.all_utils import save_plot
 import numpy as np
 import matplotlib.pyplot as plt
@@ -50,8 +49,10 @@ def main(epoch,Activation1,Activation2,Activation3,LOSS_FUNCTION,OPTIMIZER,METRI
             save_plot(file_name)
 
         print("---"*20)
-    filename=model_name
-    save_model(model_name=model_name,filename=filename)
+    
+    
+    model_name.save("model.h5")
+    
 
 
 if __name__ == "__main__":

@@ -19,9 +19,7 @@ def prepare_data(mnist):
     sns.heatmap(img/255, annot=True, cmap="binary")
     return (X_train_full, y_train_full),(X_test, y_test)
 
-def save_model(model_name,filename):
-    model_dir = "models"    
-    model_name.save(model_dir,"model.H5")
+
 
 def save_plot(file_name):
     plot_dir = "plots"
